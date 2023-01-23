@@ -1,0 +1,27 @@
+.row {
+  height: 20rem;
+  position: relative;
+  border: 1px solid;
+  svg {
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &-slider__left {
+    left: 2%;
+    top: 50%;
+  }
+  &-slider__right {
+    left: 98%;
+    top: 50%;
+  }
+}

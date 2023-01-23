@@ -1,11 +1,11 @@
 header {
-  padding: 1rem;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  top: 0;
   .header {
     &-left {
       display: flex;
@@ -20,7 +20,7 @@ header {
       gap: 2rem;
       font-size: 1.4rem;
       align-items: center;
-      @media (max-width: 27rem) {
+      @media (max-width: 728px) {
         display: none;
       }
       &__link {

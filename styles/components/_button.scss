@@ -1,0 +1,38 @@
+.btn {
+  border: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bolder;
+}
+.play {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.4s;
+  &:hover {
+    color: #000;
+    background-color: rgb(220, 220, 220);
+  }
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.info{
+  background-color: #d3d3d3c1;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.4s;
+  &:hover {
+    color: #000;
+    background-color: #dcdcdc74;
+  }
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
