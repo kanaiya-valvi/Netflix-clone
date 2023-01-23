@@ -1,0 +1,45 @@
+header {
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  .header {
+    &-left {
+      display: flex;
+      gap: 40px;
+      img {
+        width: 10rem;
+        height: 4rem;
+      }
+    }
+    &-menu {
+      display: flex;
+      gap: 2rem;
+      font-size: 1.4rem;
+      align-items: center;
+      @media (max-width: 27rem) {
+        display: none;
+      }
+      &__link {
+        color: rgb(239, 239, 239);
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover {
+          color: #cb0606;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .icon {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}
