@@ -9,24 +9,25 @@ function RowsList({ title, movies }) {
   const handleClick = (direction) => {
     setIsMoved(true);
     if (rowRef.current) {
-      const { scrollLeft, clientWidth } = rowRef.current;      
+      const { scrollLeft, clientWidth } = rowRef.current;
       const scrollTo =
         direction === "left"
           ? scrollLeft - clientWidth
           : scrollLeft + clientWidth;
-      rowRef.current.scrollTo({ left: scrollTo  ,behavior:"smooth"});      
+      rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
-     setIsMoved(false);
   };
 
   return (
     <div className="rowList">
       <h2 className="rowList--title">{title}</h2>
       <div className="row">
-        <ChevronLeftIcon
-          className="row-slider__left"
-          onClick={() => handleClick("left")}
-        />
+        {isMoved && (
+          <ChevronLeftIcon
+            className="row-slider__left"
+            onClick={() => handleClick("left")}
+          />
+        )}
         <div ref={rowRef} className="rowList--content">
           {movies.map((movie) => (
             <Thubnail key={movie.id} movie={movie} />
