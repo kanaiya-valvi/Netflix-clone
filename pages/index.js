@@ -26,7 +26,7 @@ const Home = (props) => {
       <Header />
       <main>
         <Benner netflixOriginals={netflixOriginals} />
-        <section>
+        <section className="">
           <RowsList title="Trending Now" movies={trendingNow} />
           <RowsList title="Top Rated" movies={topRated} />
           <RowsList title="Action Thrillers" movies={actionMovies} />

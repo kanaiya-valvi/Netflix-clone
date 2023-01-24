@@ -6,19 +6,36 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 62.5%;
+  @media (min-width: 425px) {
+    ::-webkit-scrollbar {
+      width: 0.4rem;
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      width: 0.4rem;
+      background-color: red;
+      border-radius: 100px;
+    }
+  }
 }
 body {
-  background-color: #000;
+ background: rgb(2,0,36);
+background: linear-gradient(to bottom, rgba(2,0,36,1) 0%, rgba(2,2,3,1) 100%, rgba(0,212,255,1) 100%);
   color: #fff;
 }
 ul {
   list-style: none;
 }
+main{
+  padding: 0 2rem;
+}
 .scroll-bg {
-  background-color: rgb(0, 0, 0);
+  transition: all 0.4s;
+  // background-color: rgb(0, 0, 0);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.826), transparent);
 }
 .hearo-section {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

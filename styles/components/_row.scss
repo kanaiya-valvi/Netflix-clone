@@ -1,14 +1,18 @@
 .row {
-  height: 20rem;
+  height: 15rem;
   position: relative;
-  border: 1px solid;
   svg {
-    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
     width: 5rem;
     position: absolute;
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.5s;
     transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.347);
   }
   &:hover {
     svg {
@@ -19,9 +23,58 @@
   &-slider__left {
     left: 2%;
     top: 50%;
+    @media (min-width: 425px) {
+      &-slider__left {
+        left: 2%;
+      }
+    }
   }
   &-slider__right {
     left: 98%;
     top: 50%;
+    @media (max-width: 425px) {
+      &-slider__right {
+        left: 98%;
+      }
+    }
+  }
+}
+.rowList {
+  margin-bottom: 2rem;
+  overflow-y: visible;
+  &--title {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  &--content {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 1rem 0;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+.thubnail {
+  &--wrapper {
+    cursor: pointer;
+    height: 13rem;
+    min-width: 28rem;
+    position: relative;
+    transition: 0.2s;
+    border-radius: 4px;
+    &:hover {
+      border-radius: 4px;
+      transform: scale(1.1);
+      z-index: 111;
+    }
+  }
+  &--image {
+    border-radius: 4px;
+    object-fit: cover;
   }
 }
