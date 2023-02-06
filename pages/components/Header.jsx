@@ -3,9 +3,11 @@ import SearchIcon from "@heroicons/react/24/solid/MagnifyingGlassIcon";
 import { BellIcon } from "@heroicons/react/24/solid";
 import User from "@heroicons/react/24/solid/UserCircleIcon";
 import Link from "next/link";
+import useAuth from "../../hooks/useAuth";
 
 function Header() {
   const [isScroll, setIsScroll] = useState(false);
+  const { logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,9 +40,9 @@ function Header() {
       <div className="header-right">
         <SearchIcon className="icon" />
         <BellIcon className="icon" />
-        <Link href="/accounts">
-          <User className="icon" />
-        </Link>
+        {/* <Link href="/accounts"> */}
+        <User className="icon" onClick={logout} />
+        {/* </Link> */}
       </div>
     </header>
   );

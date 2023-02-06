@@ -7,6 +7,21 @@
   padding: 1rem 1.5rem;
   border-radius: 4px;
   font-weight: bolder;
+  cursor: pointer;
+  &-singin{
+    width: 100%;
+    background-color: #e50914;
+    color:#fff;
+  }
+  &-singup{
+    color: #fff;
+    display: inline;
+    padding:0;
+    background-color: transparent;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
 .play {
   background-color: #fff;
